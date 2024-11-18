@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pasador de Fotos</title>
+        <style>
+            /* Estilo del contenedor */
+            body {
+                background-color: black;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                color: white;
+            }
+
+            .logo {
+                /* display: flex; */
+                align-items: center;
+            }
+
+            .logo img {
+                height: 80px;
+                margin-right: 20px;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: black;
+                max-width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                /* Elimina el subrayado */
+                color: inherit;
+                /* Mantiene el color original del texto */
+            }
+
+            .slideshow-container {
+                position: relative;
+                max-width: 900px;
+                margin: auto;
+            }
+
+            /* Estilo para cada slide */
+            .mySlides {
+                display: none;
+            }
+
+            /* Estilo de las imágenes */
+            img {
+                width: 100%;
+                border-radius: 8px;
+            }
+
+            /* Botones anterior y siguiente */
+            .next,
+            .prev {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 50px;
+                color: white;
+                font-weight: bold;
+                font-size: 50px;
+                transition: 0.3s;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Posicionamiento de los botones */
+            .prev {
+                left: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 0 3px 3px 0;
+            }
+
+            /* Efecto de hover para los botones */
+            .next:hover,
+            .prev:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            /* Estilos para los puntos de navegación */
+            .dot-container {
+                text-align: center;
+                padding: 10px;
+                background: #ddd;
+                border-radius: 8px;
+            }
+
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.3s;
+            }
+
+            .active,
+            .dot:hover {
+                background-color: #717171;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .el-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
+                gap: 15px;
+                padding: 5px;
+                max-width: 90vw;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="logo">
+            <a href="index.html">
+                <img alt="Logo Federación" src="index_archivos/image293.png"  style="height: 50px;width: 50px"/>
+
+                <span class="title" >CASA DE MURCIA</span>
+
+            </a>
+        </div>
+
+        <div></div>
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/001.png" alt="Imagen 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/002.png" alt="Imagen 2">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/003.png" alt="Imagen 3">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/004.png" alt="Imagen 4">
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/005.png" alt="Imagen 5">
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="mySlides">
+                <img src="Exposicion/SELECCION/murcia/006.png" alt="Imagen 6">
+            </div>
+
+            <!-- Botones de navegación -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Puntos de navegación -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+
+        </div>
+
+        <div class="el-container">
+            <p>
+
+                <strong>NOTA</strong>: Si desea interrumpir el paso automático de las fotos, pulse en el logo de la federación (arriba a la izquierda)
+            </p>
+            <p></p>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Función para avanzar o retroceder slides
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Función para mostrar el slide actual
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            // Función principal para mostrar slides
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+
+                // Hacer el índice circular
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+
+                // Ocultar todos los slides
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                // Remover la clase "active" de todos los puntos
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i]
+                        .className
+                        .replace(" active", "");
+                }
+
+                // Mostrar el slide actual y añadir la clase "active" al punto correspondiente
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            // Función para avanzar automáticamente cada 3 segundos
+            function autoAdvanceSlides() {
+                plusSlides(1);
+            }
+
+            // Configurar el intervalo para avanzar automáticamente
+            setInterval(autoAdvanceSlides, 3000); // Cambia cada 3 segundos
+        </script>
+
+    </body>
+</html>

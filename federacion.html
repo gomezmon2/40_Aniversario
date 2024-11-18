@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Federación de Casas Regionales</title>
+        <style>
+            body {
+                background-color: black;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                color: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: black;
+                max-width: 100%;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 80px;
+                margin-right: 20px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .expo-info {
+                font-size: 1.2rem;
+                font-style: italic;
+                color: #aaa;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                max-width: 90vw;
+                margin: 0 auto;
+            }
+
+            .el-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
+                gap: 15px;
+                padding: 5px;
+                max-width: 90vw;
+                margin: 100px;
+            }
+
+            .folder-container {
+                text-align: center;
+                color: white;
+            }
+
+            .folder-image {
+                width: 150px;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .folder-text {
+                margin-top: 5px;
+                font-weight: bold;
+            }
+
+            a {
+                text-decoration: none;
+                /* Elimina el subrayado */
+                color: inherit;
+                /* Mantiene el color original del texto */
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            footer p {
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Encabezado -->
+        <header class="header">
+            <a href="index.html">
+                <div class="logo">
+                    <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;"/>
+                    <img alt="Actividades de la Federación de Casas Regionales"
+                    src="index_archivos/carpetaFederacion.png"/>
+                    <span class="title">Actividades de la Federación de Casas Regionales</span>
+                </div>
+            </a>
+            <div>
+
+                <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;"/>
+                <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 50px;"/>
+            </div>
+        </header>
+        <!-- Contenedor de imágenes en grid -->
+        <div class="grid-container">
+
+            <a href="diaCasas.html">
+                <div class="folder-container">
+                    <img alt="Día de las Casas Regionales" class="folder-image" src="index_archivos/carpetaCasa.png"/>
+                    <p class="folder-text">Día de las Casas Regionales</p>
+                </div>
+            </a>
+            <!-- <div class="folder-container">
+                <img alt="Visitas a Edades del Hombre" class="folder-image" src="index_archivos/carpetaExposicion_Video.png"/>
+                <p class="folder-text">Visitas a Edades del Hombre</p>
+            </div>-->
+
+            <a href="feria.html">
+                <div class="folder-container">
+                    <img alt="Feria Folklore y Gastronomía" class="folder-image" src="index_archivos/carpetaFeria.png"/>
+                    <p class="folder-text">Feria Folklore</p>
+                </div>
+            </a>
+            <div class="folder-container">
+                <img alt="Campeonato de Mus" class="folder-image" src="index_archivos/carpetaMus_Video.png"/>
+                <p class="folder-text">Campeonato Mus</p>
+            </div>
+            <div class="folder-container">
+                <img alt="Muestra de Villancicos" class="folder-image" src="index_archivos/carpetaVillancicos_Video.png"/>
+                <p class="folder-text">Muestra Villancicos</p>
+            </div>
+            <div class="folder-container">
+                <img alt="Vino de Navidad" class="folder-image" src="index_archivos/carpetaVino_Video.png"/>
+                <p class="folder-text">Vino Navidad</p>
+            </div>
+            <div class="folder-container">
+                <img alt="Castillo de la Mota" class="folder-image" src="index_archivos/carpetaCastillo_Video.png"/>
+                <p class="folder-text">Castillo de la Mota</p>
+            </div>
+            <div class="folder-container">
+                <img alt="Excursiones" class="folder-image" src="index_archivos/carpetaExcursiones_Video.png"/>
+                <p class="folder-text">Excursiones</p>
+            </div>
+            <div class="folder-container">
+                <img alt="Varios" class="folder-image" src="index_archivos/carpetaVarios_Video.png"/>
+                <p class="folder-text">Varios</p>
+            </div>
+
+        </div>
+        <!-- Agregar más elementos aquí según las regiones -->
+        <div class="el-container">
+
+            <a>
+                <h3>Fines de la Federación:</h3>
+                <p>
+                La Federación tiene su sede en Valladolid y fue fundada en 1984 con el objetivo de promover
+                y difundir la cultura y tradiciones de nuestros lugares de origen en Castilla y León.
+                Para ello, la Federación organiza diversas actividades culturales y festivas, como exposiciones,
+                conciertos, conferencias, concursos gastronómicos y deportivos, etc.
+                En la actualidad, la Federación está integrada por de 21 Casas Regionales y Centros Provinciales,
+                que representan a casi todas las provincias de Castilla y León y gran parte de las
+                Comunidades y Ciudades Autónomas españolas.
+            </p>
+            </a>
+
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+            Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
+
+    </footer>
+
+</body>
+
+</html>

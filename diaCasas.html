@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Federación de Casas Regionales</title>
+        <style>
+            body {
+                background-color: black;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                color: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: black;
+                max-width: 100%;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 80px;
+                margin-right: 20px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .expo-info {
+                font-size: 1.2rem;
+                font-style: italic;
+                color: #aaa;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                max-width: 90vw;
+                margin: 0 auto;
+            }
+
+            .el-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
+                gap: 15px;
+                padding: 5px;
+                max-width: 90vw;
+                margin: 100px;
+            }
+
+            .folder-container {
+                text-align: center;
+                color: white;
+            }
+
+            .folder-image {
+                width: 150px;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .folder-text {
+                margin-top: 5px;
+                font-weight: bold;
+            }
+
+            a {
+                text-decoration: none;
+                /* Elimina el subrayado */
+                color: inherit;
+                /* Mantiene el color original del texto */
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            footer p {
+                margin: 0;
+            }
+            #videoPlayer {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Encabezado -->
+        <header class="header">
+            <a href="federacion.html">
+                <div class="logo">
+                    <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;"/>
+                    <img alt="Actividades de la Federación de Casas Regionales"
+                    src="index_archivos/carpetaFederacion.png"/>
+                    <span class="title">Día Casas Regionales</span>
+                </div>
+            </a>
+            <div>
+
+                <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;"/>
+                <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 50px;"/>
+            </div>
+        </header>
+        <!-- Contenedor de imágenes en grid -->
+        <div class="grid-container">
+
+            <div class="folder-container">
+                <img alt="Encuentro" class="folder-image" src="index_archivos/carpetaEncuentro_Video.png" onclick="playVideo('Exposicion/Videos/federacion/diaCasasEncuentros01.mp4')"/>
+                <p class="folder-text">Encuentro</p>
+            </div>
+
+            <div class="folder-container">
+                <img alt="Festival de Folklore" class="folder-image" src="index_archivos/carpetaFestival_Video.png"  onclick="playVideo('Exposicion/Videos/federacion/diaCasasFestival.mp4')"/>
+                <p class="folder-text">Festival de Folklore</p>
+            </div>
+
+            <div class="folder-container">
+                <img alt="Misa en honor de la Virgen San Lorenzo" class="folder-image" src="index_archivos/carpetaMisa_Video.png"  onclick="playVideo('Exposicion/Videos/federacion/diaCasasMisa.mp4')"/>
+                <p class="folder-text">Misa Virgen San Lorenzo</p>
+            </div>
+
+            <div class="folder-container">
+                <img alt="Varios" class="folder-image" src="index_archivos/carpetaVarios_Video.png"  onclick="playVideo('Exposicion/Videos/federacion/diaCasasVarios.mp4')"/>
+                <p class="folder-text">Varios</p>
+            </div>
+
+        </div>
+        <!-- Agregar más elementos aquí según las regiones -->
+    </div>
+    <div class="el-container">
+        <p>
+            <h3>NOTA:</h3>
+        
+                Si desea interrumpir la visión del vídeo. Mueva el cursor del reproductor hasta el final y espere a que finalice
+        </p>
+    </div>
+    <!-- Video incrustado -->
+    <video id="videoPlayer" width="640" height="360" controls>
+        <source id="videoSource" type="video/mp4">
+    Tu navegador no soporta la reproducción de vídeos en HTML5.
+        </video>
+
+    <script>
+        // Función para reproducir el vídeo en pantalla completa
+        function playVideo(videoPath) {
+            const video = document.getElementById('videoPlayer');
+            const source = document.getElementById('videoSource');
+
+            // Configurar la ruta del vídeo seleccionada y mostrar el reproductor
+            source.src = videoPath;
+            video.load(); // Cargar el nuevo vídeo
+            video.style.display = 'block';
+            video.play();
+
+            // Solicitar pantalla completa
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { // Para navegadores Safari
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // Para IE/Edge
+                video.msRequestFullscreen();
+            }
+
+            // Evento al terminar el vídeo
+            video.onended = function () {
+                // Salir de pantalla completa y ocultar el reproductor
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { // Para navegadores Safari
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // Para IE/Edge
+                    document.msExitFullscreen();
+                }
+                // Ocultar el vídeo al finalizar
+                video.style.display = 'none';
+            };
+        }
+    </script>
+
+</div>
+<footer>
+    <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+           Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
+
+</footer>
+</body>
+
+</html>

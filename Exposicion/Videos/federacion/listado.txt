@@ -1,0 +1,34 @@
+Listado de rutas de carpetas para el volumen Nuevo
+El número de serie del volumen es 104F-0B92
+W:.
+    Actualizar_Listado.bat
+    diaCasasEncuentros01.mp4-----------------Ok
+    diaCasasEncuentros01.pptx
+    diaCasasFestival.mp4---------------------Ok
+    diaCasasFestival.pptx
+    diaCasasMisa.mp4-------------------------Ok
+    diaCasasMisa.pptx
+    diaCasasVarios.mp4-----------------------Ok
+    diaCasasVarios.pptx
+    Feria1¦PiedraNuevorecinto.mp4------------Ok
+    Feria1¦PiedraNuevorecinto.pptx
+    FeriaActuaciones.mp4---------------------Ok
+    FeriaActuaciones.pptx
+    FeriaAntiguas.mp4------------------------Ok
+    FeriaAntiguas.pptx
+    FeriaAutoridades.mp4---------------------Ok
+    FeriaAutoridades.pptx
+    FeriaDesfiles.mp4------------------------Ok
+    FeriaDesfiles.pptx
+    FeriaInfraestructuras.mp4----------------Ok
+    FeriaInfraestructuras.pptx
+    FeriaInIzadas.mp4------------------------Ok
+    FeriaInIzadas.pptx
+    FeriaTormenta2023.mp4--------------------Ok
+    FeriaTormenta2023.pptx
+    listado.txt
+    Varios.mp4-------------------------------Ok
+    Varios.pptx
+    
+No existe ninguna subcarpeta 
+
