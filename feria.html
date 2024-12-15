@@ -2,203 +2,120 @@
 
 <html lang="es">
 
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>Federación de Casas Regionales</title>
-        <style>
-            body {
-                background-color: black;
-                margin: 0;
-                font-family: Arial, sans-serif;
-                color: white;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Federación de Casas Regionales</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
 
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
-                background-color: black;
-                max-width: 100%;
-            }
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a class="logo-federacion" href="index.html">
+            <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
+            <img src="index_archivos/image293.png" alt="Logo Federación">
+        </a>
+        <span class="logo-expo">
+            <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />
 
-            .logo {
-                display: flex;
-                align-items: center;
-            }
+        </span>
 
-            .logo img {
-                height: 80px;
-                margin-right: 20px;
-            }
-
-            .title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                white-space: nowrap;
-            }
-
-            .expo-info {
-                font-size: 1.2rem;
-                font-style: italic;
-                color: #aaa;
-            }
-
-            .grid-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 25px;
-                padding: 5px;
-                max-width: 90vw;
-                margin: 0 auto;
-            }
-
-            .el-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
-                gap: 0;
-                padding: 0;
-                max-width: 90vw;
-                margin: 0 auto;
-            }
-
-            .folder-container {
-                text-align: center;
-                color: white;
-            }
-
-            .folder-image {
-                width: 150px;
-                height: auto;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .folder-text {
-                margin-top: 5px;
-                font-weight: bold;
-            }
-
-            a {
-                text-decoration: none;
-                /* Elimina el subrayado */
-                color: inherit;
-                /* Mantiene el color original del texto */
-            }
-
-            footer {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 10px;
-                position: fixed;
-                width: 100%;
-                bottom: 0;
-            }
-
-            footer p {
-                margin: 0;
-            }
-
-            #videoPlayer {
-                display: none;
-            }
-        </style>
-    </head>
-
-    <body>
-        <!-- Encabezado -->
-        <header class="header">
-            <a href="federacion.html">
-                <div class="logo">
-                    <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;"/>
-                    <img alt="Actividades de la Federación de Casas Regionales"
-                    src="index_archivos/carpetaFederacion.png"/>
-                    <span class="title">Feria Folklore y Gastronomía</span>
+    </header>
+    <!-- Contenedor de imágenes -->
+    <div class="container">
+        <a class="caseta" href="federacion.html">
+            <img alt="Feria del Folklore y Gastronomía" src="index_archivos/carpetaFeria.png" />
+            <span class="title">Actividades de la Federación | Feria del Folklore y Gastronomía</span>
+        </a>
+        <div class="grid-container">
+            <a href="FEDferiaAntiguas.html">
+                <div class="folder-container">
+                    <img alt="Fotos antiguas" class="folder-image" src="index_archivos/fedAntiguas.png" />
+                    <p class="folder-text">Fotos antiguas</p>
                 </div>
             </a>
-            <div>
 
-                <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;"/>
-                <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 50px;"/>
-            </div>
-        </header>
-        <!-- Contenedor de imágenes en grid -->
-        <div class="grid-container">
-            <div class="folder-container">
+            <a href="FEDferiaTormenta.html">
+                <div class="folder-container">
+                    <img alt="Dana del 2023" class="folder-image" src="index_archivos/fedTormenta.png" />
+                    <p class="folder-text">Dana del 2023</p>
+                </div>
+            </a>
 
-                <img alt="Fotos Antiguas" class="folder-image" src="index_archivos/carpetaAntiguas_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaAntiguas.mp4')"/>
-                <p class="folder-text">Fotos Antiguas</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaActuaciones.html">
+                <div class="folder-container">
+                    <img alt="Actuaciones" class="folder-image" src="index_archivos/fedActuaciones.png" />
+                    <p class="folder-text">Actuaciones </p>
+                </div>
+            </a>
 
-                <img alt="Tormenta 2023" class="folder-image" src="index_archivos/carpetaTormenta2023_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaTormenta2023.mp4')"/>
-                <p class="folder-text">Tormenta 2023</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaInfraestructuras.html">
+                <div class="folder-container">
+                    <img alt="infraestructuras" class="folder-image" src="index_archivos/fedInfraestruturas.png" />
+                    <p class="folder-text">infraestructuras </p>
+                </div>
+            </a>
 
-                <img alt="Actuaciones" class="folder-image" src="index_archivos/carpetaActuaciones_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaActuaciones.mp4')"/>
-                <p class="folder-text">Actuaciones</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaDesfiles.html">
+                <div class="folder-container">
+                    <img alt="Desfiles" class="folder-image" src="index_archivos/fedDesfile.png" />
+                    <p class="folder-text">Desfiles </p>
+                </div>
+            </a>
 
-                <img alt="Infraestructura" class="folder-image" src="index_archivos/carpetaInfraestructura_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaInfraestructuras.mp4')"/>
-                <p class="folder-text">Infraestructura</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaAutoridades.html">
+                <div class="folder-container">
+                    <img alt="Autoridades" class="folder-image" src="index_archivos/fedAutoridades.png" />
+                    <p class="folder-text">Autoridades </p>
+                </div>
+            </a>
 
-                <img alt="Desfile" class="folder-image" src="index_archivos/carpetaDesfile_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaDesfiles.mp4')"/>
-                <p class="folder-text">Desfile</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaIzadas.html">
+                <div class="folder-container">
+                    <img alt="Izadas" class="folder-image" src="index_archivos/fedIzadas.png" />
+                    <p class="folder-text">Izadas </p>
+                </div>
+            </a>
 
-                <img alt="Autoridades" class="folder-image" src="index_archivos/carpetaAutoridades_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaAutoridades.mp4')"/>
-                <p class="folder-text">Autoridades</p>
-            </div>
-            <div class="folder-container">
+            <a href="FEDferiaNiños.html">
+                <div class="folder-container">
+                    <img alt="Dana del 2023" class="folder-image" src="index_archivos/fedNiños.png" />
+                    <p class="folder-text">Niños </p>
+                </div>
+            </a>
 
-                <img alt="Izadas" class="folder-image" src="index_archivos/carpetaIzadas_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaInIzadas.mp4')"/>
-                <p class="folder-text">Izadas</p>
-            </div>
-            <div class="folder-container">
-
-                <img alt="Niños" class="folder-image" src="index_archivos/carpetaNiños_Video.png" onclick="playVideo('Exposicion/Videos/federacion/FeriaNiños.mp4')"/>
-                <p class="folder-text">Niños</p>
-            </div>
-            <div class="folder-container">
-
-                <img alt="Varios" class="folder-image" src="index_archivos/carpetaVarios_Video.png" onclick="playVideo('Exposicion/Videos/federacion/diaCasasVarios.mp4')"/>
-                <p class="folder-text">Varios</p>
-            </div>
-            <div class="folder-container">
-
-                <img alt="1ª Piedra nuevo recinto" class="folder-image" src="index_archivos/carpeta1ªPiedra_Video.png" onclick="playVideo('Exposicion/Videos/federacion/Feria1ªPiedraNuevorecinto.mp4')"/>
-                <p class="folder-text">1ª Piedra nuevo recinto</p>
-            </div>
-            <div class="folder-container">
-
-                <img alt="Vino de navidad" class="folder-image" src="index_archivos/carpetaVino_Video.png" onclick="playVideo('Exposicion/Videos/federacion/vinoNavidad.mp4')"/>
-                <p class="folder-text">Vino de navidad</p>
-            </div>
+            <a href="FEDferiaPiedra.html">
+                <div class="folder-container">
+                    <img alt="1ª Piedra nuevo recinto" class="folder-image" src="index_archivos/fedCapsula.png" />
+                    <p class="folder-text">1ª Piedra nuevo recinto </p>
+                </div>
+            </a>
 
         </div>
         <!-- Agregar más elementos aquí según las regiones -->
-    </div>
-    <div class="el-container">
-        <p>
-            <h3>NOTA:</h3>
-        
-                Si desea interrumpir la visión del vídeo. Mueva el cursor del reproductor hasta el final y espere a que finalice
-        </p>
-    </div>
-    <!-- Video incrustado-->
-    <video id="videoPlayer" width="640" height="360" controls>
-        <source id="videoSource" type="video/mp4">
-    Tu navegador no soporta la reproducción de vídeos en HTML5.
+        <div class="el-container">
+            <a>
+                <h3>NOTA:</h3>
+                <p>
+                    Si desea interrumpir la visión del vídeo. Mueva el cursor del reproductor hasta el final y espere a
+                    que
+                    finalice
+                </p>
+            </a>
+        </div>
+        <!-- Video incrustado -->
+        <video id="videoPlayer" controls>
+            <source id="videoSource" type="video/mp4">
+            Tu navegador no soporta la reproducción de vídeos en HTML5.
         </video>
+    </div>
+    <footer>
+        <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+            Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
 
-    <script>
+    </footer>
+    <script defer>
         // Función para reproducir el vídeo en pantalla completa
         function playVideo(videoPath) {
             const video = document.getElementById('videoPlayer');
@@ -235,12 +152,6 @@
         }
     </script>
 
-</div>
-<footer>
-    <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
-           Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
-
-</footer>
 </body>
 
 </html>

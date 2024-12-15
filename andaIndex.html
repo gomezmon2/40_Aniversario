@@ -18,11 +18,11 @@
         </a>
         <span class="logo-expo">
             <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />
-            <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 50px;" />
+
         </span>
 
     </header>
-    <!-- Contenedor de imágenes en grid -->
+    <!-- Contenedor de imágenes -->
     <div class="container">
 
         <a class="caseta" href="andaIndex.html">
@@ -33,99 +33,63 @@
             <a href="andaSemanaCultural02.html">
                 <div class="folder-container">
                     <img alt="Semana Cultural" class="folder-image" src="index_archivos/carpetaAndaCultural.png" />
-                    <p class="folder-text">Semana Cultural</p>
+                    <p class="folder-text">SEMANA CULTURAL</p>
                 </div>
             </a>
-            <div class="folder-container">
 
-                <img alt="Antiguas" class="folder-image" src="index_archivos/carpetaAndaAntiguas.png"
-                    onclick="playVideo('Exposicion/Videos/Andalucia/Fotos Antiguas.mp4')" />
-                <p class="folder-text">Antiguas</p>
-            </div>
-
-            <div class="folder-container">
-
-                <img alt="Caseta" class="folder-image" src="index_archivos/carpetaCaseta.png"
-                    onclick="playVideo('Exposicion/Videos/Andalucia/andaCasetapptx.mp4')" />
-                <p class="folder-text">Caseta</p>
-            </div>
-
-            <div class="folder-container">
-                <img alt="Grupo de Baile" class="folder-image" src="index_archivos/carpetaBaile.png"
-                    onclick="playVideo('Exposicion/Videos/Andalucia/andaGrupoBaile.mp4')" />
-                <p class="folder-text">Grupo de Baile</p>
-            </div>
-            <div class="folder-container">
-                <img alt="Romería del Rocío" class="folder-image" src="index_archivos/carpetaRocio.png"
-                    onclick="playVideo('Exposicion/Videos/Andalucia/andaRocio.mp4')" />
-                <p class="folder-text">Romería del Rocío</p>
-            </div>
-
-            <div class="folder-container">
-                <img alt="Un poco de todo" class="folder-image" src="index_archivos/carpetaVarios_Video.png"
-                    onclick="playVideo('Exposicion/Videos/Andalucia/andaVarios.mp4')" />
-                <p class="folder-text">Un poco de todo</p>
-            </div>
-
-            <!-- Agregar más elementos aquí según las regiones -->
-        </div>
-        <div class="el-container">
-            <a>
-                <h3>NOTA:</h3>
-                <p>
-                    Si desea interrumpir la visión del vídeo. Mueva el cursor del reproductor hasta el final y espere a
-                    que
-                    finalice
-                </p>
+            <a href="andaAntiguasIndex.html">
+                <div class="folder-container">
+                    <img src="index_archivos/antiguas.png" alt="ANTIGUAS" class="folder-image"
+                        title="Pasador de fotos fotos antiguas Andalucía">
+                    <p class="folder-text">ANTIGUAS</p>
+                </div>
             </a>
-        </div>
-        <!-- Video incrustado -->
-        <video id="videoPlayer" controls>
-            <source id="videoSource" type="video/mp4">
-            Tu navegador no soporta la reproducción de vídeos en HTML5.
-        </video>
+
+            <a href="andaCasetaIndex.html">
+                <div class="folder-container">
+                    <img src="index_archivos/caseta.png" alt="CASETA" class="folder-image"
+                        title="Pasador de fotos fotos Caseta Andalucía">
+                    <p class="folder-text">CASETA</p>
+                </div>
+            </a>
+
+            <a href="andaBaileIndex.html">
+                <div class="folder-container">
+                    <img src="index_archivos/baile.png" alt="BAILE" class="folder-image"
+                        title="Pasador de fotos fotos Baile Andalucía">
+                    <p class="folder-text">BAILE</p>
+                </div>
+            </a>
+
+            <a href="andaRocioIndex.html">
+                <div class="folder-container">
+                    <img src="index_archivos/rocio.png" alt="ROCÍO" class="folder-image"
+                        title="Pasador de fotos fotos Rocío Andalucía">
+                    <p class="folder-text">ROCÍO</p>
+                </div>
+            </a>
+
+        </div><!-- Cierra el <div class="container">-->
+
     </div>
+    <div class="el-container">
+        <p>
+
+            <strong>NOTA</strong>: Si desea interrumpir el paso automático de las fotos, pulse en el logo de la
+            federación (arriba a la izquierda)
+        </p>
+        <p></p>
+    </div>
+
     <footer>
         <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
             Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
 
+
+
     </footer>
-    <script defer>
-        // Función para reproducir el vídeo en pantalla completa
-        function playVideo(videoPath) {
-            const video = document.getElementById('videoPlayer');
-            const source = document.getElementById('videoSource');
 
-            // Configurar la ruta del vídeo seleccionada y mostrar el reproductor
-            source.src = videoPath;
-            video.load(); // Cargar el nuevo vídeo
-            video.style.display = 'block';
-            video.play();
 
-            // Solicitar pantalla completa
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) { // Para navegadores Safari
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // Para IE/Edge
-                video.msRequestFullscreen();
-            }
-
-            // Evento al terminar el vídeo
-            video.onended = function () {
-                // Salir de pantalla completa y ocultar el reproductor
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { // Para navegadores Safari
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { // Para IE/Edge
-                    document.msExitFullscreen();
-                }
-                // Ocultar el vídeo al finalizar
-                video.style.display = 'none';
-            };
-        }
-    </script>
 </body>
 
 </html>

@@ -2,142 +2,38 @@
 
 <html lang="es">
 
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>Federación de Casas Regionales</title>
-        <style>
-            body {
-                background-color: black;
-                margin: 0;
-                font-family: Arial, sans-serif;
-                color: white;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Federación de Casas Regionales</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
 
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
-                background-color: black;
-                max-width: 100%;
-            }
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a class="logo-federacion" href="index.html">
+            <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
+            <img src="index_archivos/image293.png" alt="Logo Federación">
+        </a>
+        <span class="logo-expo">
+            <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />
 
-            .logo {
-                display: flex;
-                align-items: center;
-            }
+        </span>
 
-            .logo img {
-                height: 80px;
-                margin-right: 20px;
-            }
-
-            .title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                white-space: nowrap;
-            }
-
-            .expo-info {
-                font-size: 1.2rem;
-                font-style: italic;
-                color: #aaa;
-            }
-
-            .grid-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 20px;
-                padding: 20px;
-                max-width: 90vw;
-                margin: 0 auto;
-            }
-
-            .el-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
-                gap: 15px;
-                padding: 5px;
-                max-width: 90vw;
-                margin: 100px;
-            }
-
-            .folder-container {
-                text-align: center;
-                color: white;
-            }
-
-            .folder-image {
-                width: 150px;
-                height: auto;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .folder-text {
-                margin-top: 5px;
-                font-weight: bold;
-            }
-
-            a {
-                text-decoration: none;
-                /* Elimina el subrayado */
-                color: inherit;
-                /* Mantiene el color original del texto */
-            }
-
-            footer {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 10px;
-                position: fixed;
-                width: 100%;
-                bottom: 0;
-            }
-
-            footer p {
-                margin: 0;
-            }
-
-            #videoPlayer {
-                display: none;
-            }
-        </style>
-    </head>
-
-    <body>
-        <!-- Encabezado -->
-        <header class="header">
-
-            <div>
-
-                <a href="index.html">
-                    <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;"/>
-                    <img src="index_archivos/image293.png" alt="Logo Federación">
-                </a>
-                <a href="andaIndex.html"></a>
-
-            </div>
-
-            <div>
-
-                <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;"/>
-                <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 50px;"/>
-
-            </div>
-        </header>
+    </header>
+    <!-- Contenedor de imágenes -->
+    <div class="container">
         <!-- Contenedor de imágenes en grid -->
         <div></div>
-        <div class="grid-container">
-            <img alt="Expo 40" src="index_archivos/SITIO-EN-CONSTRUCCION.JPG" style="height: 450px;"/>
+        <div class="folder-container">
+            <img alt="Expo 40" src="index_archivos/SITIO-EN-CONSTRUCCION.JPG" style="height: 450px;" />
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
-           Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
+            Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
 
     </footer>
 </body>

@@ -1,183 +1,52 @@
 <!DOCTYPE html>
+
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pasador de Fotos</title>
-        <style>
-            /* Estilo del contenedor */
-            body {
-                background-color: black;
-                margin: 0;
-                font-family: Arial, sans-serif;
-                color: white;
-            }
 
-            .logo {
-                /* display: flex; */
-                align-items: center;
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Federación de Casas Regionales</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
 
-            .logo img {
-                height: 80px;
-                margin-right: 20px;
-            }
-
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
-                background-color: black;
-                max-width: 100%;
-            }
-
-            a {
-                text-decoration: none;
-                /* Elimina el subrayado */
-                color: inherit;
-                /* Mantiene el color original del texto */
-            }
-
-            .slideshow-container {
-                position: relative;
-                max-width: 900px;
-                margin: auto;
-            }
-
-            /* Estilo para cada slide */
-            .mySlides {
-                display: none;
-            }
-
-            /* Estilo de las imágenes */
-            img {
-                width: 100%;
-                border-radius: 8px;
-            }
-
-            /* Botones anterior y siguiente */
-            .next,
-            .prev {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 50px;
-                color: white;
-                font-weight: bold;
-                font-size: 50px;
-                transition: 0.3s;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-            }
-
-            /* Posicionamiento de los botones */
-            .prev {
-                left: 0;
-                border-radius: 3px 0 0 3px;
-            }
-
-            .next {
-                right: 0;
-                border-radius: 0 3px 3px 0;
-            }
-
-            /* Efecto de hover para los botones */
-            .next:hover,
-            .prev:hover {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            /* Estilos para los puntos de navegación */
-            .dot-container {
-                text-align: center;
-                padding: 10px;
-                background: #ddd;
-                border-radius: 8px;
-            }
-
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.3s;
-            }
-
-            .active,
-            .dot:hover {
-                background-color: #717171;
-            }
-
-            .title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                display: inline-block;
-                vertical-align: middle;
-
-            }
-
-            .el-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(8S00px, 1fr));
-                gap: 15px;
-                padding: 5px;
-                max-width: 90vw;
-                margin: 0 auto;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Encabezado 
-        <header class="header">
-
-            <div class="logo">
-                <a href="index.html">
-                    <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;width: 200px"/>
-                    <img alt="Logo Federación" src="index_archivos/image293.png"  style="height: 100px;width: 100px"/>
-                </a>
-
-                <img alt="Casa Charra" src="index_archivos/08 Casa Charra.png" style="height: 100px;width: 100px"/>
-
-            </div>
-
-            <div>
-
-                <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;width:200px"/>
-                <img alt="GOMEZMON" src="index_archivos/MiLogoVectorizado_03.png" style="height: 60px;width: 80px"/>
-
-            </div>
-        </header>-->
-
-        <div class="logo">
-            <a href="index.html">
-                <img alt="Logo Federación" src="index_archivos/image293.png"  style="height: 50px;width: 50px"/>
-
-                <span class="title" >CASA CHARRA</span>
-
-            </a>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a class="logo-federacion" href="index.html">
+            <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
+            <img src="index_archivos/image293.png" alt="Logo Federación">
+        </a>
+        <div>
+            <H1>CASA CHARRA</H1>
         </div>
 
-        <div></div>
+
+        <span class="logo-expo">
+            <audio controls autoplay loop>
+                <source src="Exposicion/Audio/02.ogg" type="audio/mpeg">
+
+                Tu navegador no soporta el elemento audio.
+            </audio>
+        </span>
+
+    </header>
+    <!-- Contenedor de imágenes -->
+    <div class="container">
         <div class="slideshow-container">
             <!-- Slide 1 -->
             <div class="mySlides">
-                <img src="Exposicion/SELECCION/charra/DSC_0278.JPG" alt="Imagen 1">
+                <img src="Exposicion/SELECCION/charra/01.webp" alt="Imagen 1">
             </div>
             <!-- Slide 2 -->
             <div class="mySlides">
-                <img src="Exposicion/SELECCION/charra/DSC_0287.JPG" alt="Imagen 2">
+                <img src="Exposicion/SELECCION/charra/02.webp" alt=" Imagen 2">
             </div>
 
             <!-- Slide 3 -->
             <div class="mySlides">
-                <img src="Exposicion/SELECCION/charra/DSC_0296.JPG" alt="Imagen 3">
+                <img src="Exposicion/SELECCION/charra/03.webp" alt="Imagen 3">
             </div>
-
+            <br>
             <!-- Botones de navegación -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -193,62 +62,69 @@
         <div class="el-container">
             <p>
 
-                <strong>NOTA</strong>: Si desea interrumpir el paso automático de las fotos, pulse en el logo de la federación (arriba a la izquierda)
+                <strong>NOTA</strong>: Si desea interrumpir el paso automático de las fotos, pulse en el logo de la
+                federación (arriba a la izquierda)
             </p>
             <p></p>
         </div>
+    </div><!-- Cierra el <div class="container">-->
+    <footer>
+        <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+            Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
+        // Función para avanzar o retroceder slides
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-            // Función para avanzar o retroceder slides
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
+        // Función para mostrar el slide actual
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // Función principal para mostrar slides
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            // Hacer el índice circular
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
             }
 
-            // Función para mostrar el slide actual
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
+            // Ocultar todos los slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
 
-            // Función principal para mostrar slides
-            function showSlides(n) {
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-
-                // Hacer el índice circular
-                if (n > slides.length) {
-                    slideIndex = 1
-                }
-                if (n < 1) {
-                    slideIndex = slides.length
-                }
-
-                // Ocultar todos los slides
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-
-                // Remover la clase "active" de todos los puntos
-                for (let i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i]
-                        .className
-                        .replace(" active", "");
-                }
-
-                // Muestra el slide actual y añade la clase "active" al punto correspondiente
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-            // Función para avanzar automáticamente cada 3 segundos
-            function autoAdvanceSlides() {
-                plusSlides(1);
+            // Remover la clase "active" de todos los puntos
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i]
+                    .className
+                    .replace(" active", "");
             }
 
-            // Configurar el intervalo para avanzar automáticamente
-            setInterval(autoAdvanceSlides, 3000); // Cambia cada 3 segundos
-        </script>
+            // Muestra el slide actual y añade la clase "active" al punto correspondiente
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        // Función para avanzar automáticamente cada 3 segundos
+        function autoAdvanceSlides() {
+            plusSlides(1);
+        }
 
-    </body>
+        // Configurar el intervalo para avanzar automáticamente
+        setInterval(autoAdvanceSlides, 3000); // Cambia cada 3 segundos
+    </script>
+
+</body>
+
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Federación de Casas Regionales</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a class="logo-federacion" href="index.html">
+            <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
+            <img src="index_archivos/image293.png" alt="Logo Federación">
+
+        </a>
+
+        <div>
+            <H1>CASA DE ÁVILA</H1>
+        </div>
+
+
+        <span class="logo-expo">
+
+
+            <!--<img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />-->
+            <audio controls autoplay loop>
+                <source src="Exposicion/Audio/03.ogg" type="audio/mpeg">
+                Tu navegador no soporta el elemento audio.
+            </audio>
+        </span>
+
+
+    </header>
+    <!-- Contenedor de imágenes -->
+    <iframe src="file:///D:/MisSitios/gzm/40_Aniversario/expuestas.html" width="1900" height=800></iframe>
+    <iframe src="file:///D:/MisSitios/gzm/40_Aniversario/avilaIndex.html" width="1900" height=800></iframe>
+
+
+
+    <div class="container">
+
+        <div class="slideshow-container-gen">
+
+
+
+
+            <footer>
+                <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+                    Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
+        </div>
+        </footer>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Función para avanzar o retroceder slides
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Función para mostrar el slide actual
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            // Función principal para mostrar slides
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+
+                // Hacer el índice circular
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+
+                // Ocultar todos los slides
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                // Remover la clase "active" de todos los puntos
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i]
+                        .className
+                        .replace(" active", "");
+                }
+
+                // Mostrar el slide actual y añadir la clase "active" al punto correspondiente
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            // Función para avanzar automáticamente cada 3 segundos
+            function autoAdvanceSlides() {
+                plusSlides(1);
+            }
+
+
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const audio = document.getElementById("autoAudio");
+                audio.muted = false; // Desactiva el mute después de iniciar
+            });
+
+
+            // Configurar el intervalo para avanzar automáticamente
+            setInterval(autoAdvanceSlides, 3000); // Cambia cada 3 segundos
+        </script>
+
+</body>
+
+</html>

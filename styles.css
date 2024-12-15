@@ -174,6 +174,11 @@ body {
   color: white;
 }
 
+.folder-container-peque img {
+  max-width: 80px;
+  height: auto;
+}
+
 .folder-image {
   width: 150px;
   height: auto;
@@ -184,6 +189,12 @@ body {
 .folder-text {
   margin-top: 5px;
   font-weight: bold;
+}
+
+.folder-text-peque {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 10px;
 }
 
 a {
@@ -211,4 +222,118 @@ footer p {
   max-height: 100vh;
   width: 100%;
   aspect-ratio: 16/9;
+}
+
+/* Estilo para los pasadores de fotos */
+/* ---------------------------------------------------------------- */
+.slideshow-container {
+  text-align: center;
+  position: relative;
+  max-width: 1000px;
+  max-height: auto;
+  margin: auto;
+}
+
+.slideshow-container-gen {
+  text-align: center;
+  position: relative;
+  max-width: 1400px;
+  max-height: auto;
+  margin: auto;
+}
+
+/* Estilo para cada slide */
+.mySlides {
+  display: none;
+}
+
+/* Botones anterior y siguiente */
+.next,
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  width: auto;
+  padding: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Posicionamiento de los botones */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Efecto de hover para los botones */
+.next:hover,
+.prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para los puntos de navegación */
+/* ---------------------------------------------------------------- */
+.dot-container {
+  text-align: center;
+  position: relative;
+  max-width: 1000px;
+  max-height: auto;
+  margin: auto;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.dot-container-gen {
+  text-align: center;
+  position: relative;
+  max-width: 1400px;
+  max-height: auto;
+  margin: auto;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.gallery img {
+  width: 150px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+  border-color: #333;
 }
