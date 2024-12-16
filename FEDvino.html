@@ -27,7 +27,7 @@
         </div>
 
         <span class="logo-expo">
-            <audio controls autoplay loop>
+            <audio controls autoplay loop class="autoAudio">
                 <source src="Exposicion/Audio/03.ogg" type="audio/mpeg">
 
                 Tu navegador no soporta el elemento audio.
@@ -189,8 +189,8 @@
 
 
         document.addEventListener("DOMContentLoaded", () => {
-            const audio = document.getElementById("autoAudio");
-            audio.muted = false; // Desactiva el mute después de iniciar
+            const audio = document.querySelector("audio.autoAudio");
+            audio.volume = 0.3;
         });
 
 
