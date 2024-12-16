@@ -83,6 +83,7 @@ ul {
   padding-left: 1rem;
   padding-right: 1rem;
   min-height: calc(100vh - 190px - 64px);
+  flex-grow: 1;
 }
 @media (min-width: 640px) {
   .container {
@@ -117,6 +118,8 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -188,7 +191,9 @@ body {
 
 .folder-text {
   margin-top: 5px;
-  font-weight: bold;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #f3f4f6;
 }
 
 .folder-text-peque {

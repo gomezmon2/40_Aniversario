@@ -9,117 +9,105 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body>
-    <!-- Encabezado -->
-    <header class="header">
-        <a class="logo-federacion" href="index.html">
-            <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
-            <img src="index_archivos/image293.png" alt="Logo Federación">
+<!-- Encabezado -->
+<header class="header">
+    <a class="logo-federacion" href="index.html">
+        <img alt="Expo 40" src="index_archivos/40añosHistoria.png" style="height: 100px;" />
+        <img src="index_archivos/image293.png" alt="Logo Federación">
+    </a>
+    <span class="logo-expo">
+        <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />
+
+    </span>
+
+</header>
+<!-- Contenedor de imágenes -->
+<div class="container">
+
+    <a class="caseta" href="federacion.html">
+        <img alt="Actividades de la Federación" src="index_archivos/carpetaFederacion.png" />
+        <span class="title">Actividades de la Federación</span>
+    </a>
+
+    <div class="grid-container">
+        <a href="diaCasas.html">
+            <div class="folder-container">
+                <img alt="Día de las Casas Regionales" class="folder-image" src="index_archivos/carpetaCasa.png" />
+                <p class="folder-text">Día de las Casas Regionales</p>
+            </div>
         </a>
-        <span class="logo-expo">
-            <img alt="Expo 40" src="index_archivos/image297.png" style="height: 100px;" />
 
-        </span>
-
-    </header>
-    <!-- Contenedor de imágenes -->
-    <div class="container">
-
-        <a class="caseta" href="federacion.html">
-            <img alt="Actividades de la Federación" src="index_archivos/carpetaFederacion.png" />
-            <span class="title">Actividades de la Federación</span>
+        <a href="feria.html">
+            <div class="folder-container">
+                <img alt="Feria Folklore y Gastronomía" class="folder-image" src="index_archivos/carpetaFeria.png" />
+                <p class="folder-text">Feria Folklore</p>
+            </div>
         </a>
 
-        <div class="grid-container">
-            <a href="diaCasas.html">
-                <div class="folder-container">
-                    <img alt="Día de las Casas Regionales" class="folder-image" src="index_archivos/carpetaCasa.png" />
-                    <p class="folder-text">Día de las Casas Regionales</p>
-                </div>
-            </a>
-
-            <a href="feria.html">
-                <div class="folder-container">
-                    <img alt="Feria Folklore y Gastronomía" class="folder-image"
-                        src="index_archivos/carpetaFeria.png" />
-                    <p class="folder-text">Feria Folklore</p>
-                </div>
-            </a>
-
-            <a href="FEDvino.html">
-                <div class="folder-container">
-                    <img alt="Vino de Navidad" class="folder-image" src="index_archivos/fedVino.png" />
-                    <p class="folder-text">Vino de Navidad</p>
-                </div>
-            </a>
-
-            <a href="FEDvarios.html">
-                <div class="folder-container">
-                    <img alt="Varios" class="folder-image" src="index_archivos/fedVarios.png" />
-                    <p class="folder-text">Varios</p>
-                </div>
-            </a>
-
-            <!-- Agregar más elementos aquí según las regiones -->
-        </div>
-    </div>
-    <div class="el-container">
-        <a>
-            <h3>NOTA:</h3>
-            <p>
-                Si desea interrumpir la visión del vídeo. Mueva el cursor del reproductor hasta el final y
-                espere a
-                que
-                finalice
-            </p>
+        <a href="FEDvino.html">
+            <div class="folder-container">
+                <img alt="Vino de Navidad" class="folder-image" src="index_archivos/fedVino.png" />
+                <p class="folder-text">Vino de Navidad</p>
+            </div>
         </a>
+
+        <a href="FEDvarios.html">
+            <div class="folder-container">
+                <img alt="Varios" class="folder-image" src="index_archivos/fedVarios.png" />
+                <p class="folder-text">Varios</p>
+            </div>
+        </a>
+
+        <!-- Agregar más elementos aquí según las regiones -->
     </div>
     <!-- Video incrustado -->
     <video id="videoPlayer" controls>
         <source id="videoSource" type="video/mp4">
         Tu navegador no soporta la reproducción de vídeos en HTML5.
     </video>
-    </div>
-    <footer>
-        <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
-            Contacto: fecarcyl@yahoo.com | fecarcyl@gmail.com</p>
-    </footer>
-    <script defer>
-        // Función para reproducir el vídeo en pantalla completa
-        function playVideo(videoPath) {
-            const video = document.getElementById('videoPlayer');
-            const source = document.getElementById('videoSource');
+</div>
+<footer>
+    <p>&copy; 2024 Federación de Casas Regionales y Provinciales. Todos los derechos reservados. ||
+        Contacto: <a class="text-link" href="mailto:fecarcyl@yahoo.com" target="_blank"
+            rel="noopener noreferrer">fecarcyl@yahoo.com</a> | <a class="text-link" href="mailto:fecarcyl@gmail.com"
+            target="_blank" rel="noopener noreferrer">fecarcyl@gmail.com</a></p>
+</footer>
+<script defer>
+    // Función para reproducir el vídeo en pantalla completa
+    function playVideo(videoPath) {
+        const video = document.getElementById('videoPlayer');
+        const source = document.getElementById('videoSource');
 
-            // Configurar la ruta del vídeo seleccionada y mostrar el reproductor
-            source.src = videoPath;
-            video.load(); // Cargar el nuevo vídeo
-            video.style.display = 'block';
-            video.play();
+        // Configurar la ruta del vídeo seleccionada y mostrar el reproductor
+        source.src = videoPath;
+        video.load(); // Cargar el nuevo vídeo
+        video.style.display = 'block';
+        video.play();
 
-            // Solicitar pantalla completa
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) { // Para navegadores Safari
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // Para IE/Edge
-                video.msRequestFullscreen();
-            }
-
-            // Evento al terminar el vídeo
-            video.onended = function () {
-                // Salir de pantalla completa y ocultar el reproductor
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { // Para navegadores Safari
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { // Para IE/Edge
-                    document.msExitFullscreen();
-                }
-                // Ocultar el vídeo al finalizar
-                video.style.display = 'none';
-            };
+        // Solicitar pantalla completa
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) { // Para navegadores Safari
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) { // Para IE/Edge
+            video.msRequestFullscreen();
         }
-    </script>
+
+        // Evento al terminar el vídeo
+        video.onended = function () {
+            // Salir de pantalla completa y ocultar el reproductor
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { // Para navegadores Safari
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // Para IE/Edge
+                document.msExitFullscreen();
+            }
+            // Ocultar el vídeo al finalizar
+            video.style.display = 'none';
+        };
+    }
+</script>
 </body>
 
 </html>
